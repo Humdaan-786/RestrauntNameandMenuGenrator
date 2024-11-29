@@ -28,9 +28,3 @@ if cusine != "Select a Cuisine":
     st.header(f"{restaurant_name}")
     st.write("**Menu Items**")
     st.markdown(menu, unsafe_allow_html=True)
-    # for item in menu:
-    #     st.write("-", item)
-    # menu_items=responce['menu'].strip().split(",")
-    # st.write("**Menu Items**")
-    # for item in menu_items:
-    #     st.write("-",item)

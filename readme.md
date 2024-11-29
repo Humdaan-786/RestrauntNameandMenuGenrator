@@ -16,5 +16,5 @@ you will need a free api key from cohere.com
 
 ## Usage
 
-select the cusine you wish to 
+select the cusine from sidebar
 

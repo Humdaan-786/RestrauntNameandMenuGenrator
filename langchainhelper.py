@@ -7,9 +7,6 @@ from keys import cohere_key
 # Set up the Cohere LLM with your API key
 llm = Cohere(cohere_api_key=cohere_key)
 
-
-
-
 def gen_op(cusine):
     # Define the first prompt for generating the restaurant name
     restaurant_name_prompt = PromptTemplate(
@@ -46,25 +43,11 @@ def gen_op(cusine):
         input_variables=["cuisine"],  # Initial input variable
         output_variables=["restaurant_name", "menu"]  # Final output variables
     )
-
-    #   Take user input for the cuisine
-    # cuisine_type = input("Enter the type of cuisine: ").strip()
     cuisine_type=cusine
     #   Use .apply() to handle multiple outputs
     output = sequential_chain.apply([{"cuisine": cuisine_type}])
-
-    # Display the results
-    # output = output[0]  # .apply() returns a list of dictionaries
-    # print(output)s
-    # print("\nRestaurant Name:")
-    # print(output["restaurant_name"])
-    # print("\nMenu:")
-    # print(output["menu"])
-
     return output
-    # return {'restraunt_name':'Indian delight',
-    #         'menu_items':'samosa, paneer tikka'
-    #         }
+  
 
 # if __name__ == __name__:
 #     print(gen_op("Italian"))
